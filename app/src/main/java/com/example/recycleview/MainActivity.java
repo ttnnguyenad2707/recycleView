@@ -1,6 +1,8 @@
 package com.example.recycleview;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
 
 import android.os.Bundle;
 
@@ -28,5 +30,9 @@ public class MainActivity extends AppCompatActivity {
         list.add(c4);
         list.add(c5);
         list.add(c6);
+
+        RecyclerView rec = findViewById(R.id.rec_chapters);
+        rec.setLayoutManager(new LinearLayoutManager(this));
+        rec.setAdapter(new ChapterAdapter(list));
     }
 }
